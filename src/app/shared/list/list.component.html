@@ -1,0 +1,15 @@
+<spinner *ngIf="! items"></spinner>
+<div class="text-center" *ngIf=" items">
+    <input  (keyup)="search()" [(ngModel)]="searchValue" placeholder="Search by title" type="text" class="card search">
+</div>
+
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3   gap-5">
+    <div class="card" *ngFor="let item of filteredItems let  i = index ">
+        <h2 class="card-title " (click)="postDetailes(item.id)">
+            <li class="badge">{{i + 1 }}
+            </li>{{item.title}}
+        </h2>
+        <p class="text-base ">{{item.body}}</p>
+    </div>
+</div>
