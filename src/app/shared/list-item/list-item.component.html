@@ -2,13 +2,14 @@
 
 <div class="flex justify-center mt-20" *ngIf="post">
   <div class="card md:w-7/12 flex flex-col mt-20" *ngIf="!show">
-    <div class="">
-      <h2 class="card-title">
-        <li class="badge">{{post.id}}
-        </li>{{ post.title}}
-      </h2>
-      <p class="text-base">{{ post.body }}</p>
-    </div>
+
+    <li class="badge">{{post.id}}
+    </li>
+    <h2 class="card-title">
+      {{ post.title}}
+    </h2>
+    <p class="text-base">{{ post.body }}</p>
+
     <div class="flex justify-end my-5">
       <i class="fas fa-edit fa-2x btn-icons" (click)="showUpdate()"></i>
       <i class="far fa-trash-alt fa-2x m-4 btn-icons" (click)="delete()"></i>
