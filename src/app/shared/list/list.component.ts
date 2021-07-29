@@ -10,7 +10,7 @@ export class ListComponent implements OnChanges {
   @Input() items
 
   searchValue
-  filteredItems
+  filteredItems 
 
   constructor(private route: Router) {
   }
