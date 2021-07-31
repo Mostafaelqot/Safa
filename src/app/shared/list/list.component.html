@@ -6,7 +6,7 @@
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3   gap-5">
     <div class="card" *ngFor="let item of filteredItems let  i = index ">
-        <li class="badge">{{i + 1}}
+        <li class="badge">{{item.id}}
         </li>
         <h2 [innerHTML]="item.title |highlight:searchValue"  class="card-title  " (click)="postDetailes(item.id)">
         </h2>
